@@ -14,10 +14,6 @@ export default function ConsultaPaciente(){
 
     const selectConsulta = async (idPaciente) => {
         try {
-            if (idPaciente === 0) {
-                Alert.alert('Não foi possível exibir a consulta');
-                return;
-            }
             
             await api.get(`/tbl_consulta`, idPaciente)
                 .then(response => {
